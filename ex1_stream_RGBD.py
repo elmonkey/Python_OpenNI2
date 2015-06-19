@@ -79,7 +79,7 @@ else:
 dev = openni2.Device.open_any()
 #ut = nite2.UserTracker(dev)
 
-## create the streams streams
+## create the streams
 depth_stream = dev.create_depth_stream()
 rgb_stream = dev.create_color_stream()
 
