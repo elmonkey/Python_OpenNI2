@@ -1,8 +1,20 @@
 # Python4OpenNI2
-# Sample applications that use the official python wrappers for OpenNI 2 (opencv)
-# There a plenty of dependencies that need to be met.
+# Installation instructions and sample applications that use the official python wrappers for OpenNI 2 and OpenCV
+# Tested on OMAP4 (ARM) PandaBoard ES running Ubuntu 12.04, Python 2.7.3, and OpenCV.2.4.10
 
-#Build from source and installation instructions for OpenNI2 and Primensense Python Bindings on PandaBoard ES running Ubuntu 12.04.
+# There a plenty of dependencies that need to be met.
+sudo apt-get install gcc-multilib libusb-1.0.0-dev git-core build-essential
+sudo apt-get install doxygen graphviz default-jdk freeglut3-dev
+
+# Python
+sudo apt-get -y install python-dev python-numpy 
+sudo apt-get -y install python-scipy python-setuptools
+sudo apt-get -y install ipython python-pip
+sudo apt-get -y install libboost-python-dev
+
+#Instructions to...
+# Build OpenNI2 installer for PandaBoard ES 
+# Install OpenNI2 and Primensense Python Bindings on PandaBoard ES running Ubuntu 12.04.
 
 #==== COMPILE AND INSTALL OPENNI2
 # terminal (ctrl+alt+t)
