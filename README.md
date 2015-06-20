@@ -42,14 +42,14 @@ $ python ReleaseVersion.py Arm
 $ cd Final && cp OpenNI-Linux-Arm-2.2.tar.bz2 ~/Install/kinect
 
 # Extract the contents >> OpenNI-Linux-Arm-2.2
-# I rename the folder since I have multiple installations/versions
+# Rename the folder (helps with multiple installations/versions)
 # OpenNI-Linux-Arm-2.2 >> OpenNI2-Arm
 cd ~Install/kinect/OpenNI2-Arm
 # -- Install
 $ sudo ./install.sh
 
 # ==== INSTALL primesense 2.2.0.30-5: TWO OPTIONS
-# -- Option 1. via pip -- not my preferred since I have multiple versions
+# -- Option 1. via pip -- not preferred
 $ pip install primensense
 
 # -- Option 2. Manual Installation -- preferred
