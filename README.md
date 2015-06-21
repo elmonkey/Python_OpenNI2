@@ -48,7 +48,7 @@ Primesense Python Bindings
     + python setup.py install
 
 
-## OMAP/ARM PandaBoard ES
+## OpenNI2 in OMAP/ARM (PandaBoard ES and BeagleBoard -xm)
 
 `mkdir Install/kinect`
 
