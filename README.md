@@ -18,7 +18,7 @@ Installation instructions and sample using the official Python wrappers for Open
 `sudo apt-get install doxygen graphviz default-jdk freeglut3-dev`
 
 
-Python Environment
+* Python Environment
 
 `sudo apt-get -y install python-dev python-numpy `
 
