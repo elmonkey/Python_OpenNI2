@@ -1,6 +1,6 @@
 # OpenNI2 Python
 
-Installation instructions and sample using the official Python wrappers for OpenNI2 and OpenCV
+Installation instructions and samples using the official Python wrappers for OpenNI2 and OpenCV. Build and installation instructionsa dapted from [Occipital](https://github.com/occipital/OpenNI2)https://github.com/occipital/OpenNI2
 
 * Tested on the following systems (with Python 2.7.3, OpenNI2.2, and OpenCV.2.4.10)
 
