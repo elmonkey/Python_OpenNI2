@@ -1,21 +1,17 @@
 #!/usr/bin/env python
 '''
 Created on 19Jun2015
-
 Stream rgb and depth images side by side using opencv-python (cv2)
-
 Requires the following libraries:
 1. OpenNI-Linux-<Platform>-2.2 <Library and driver>
 2. primesense-2.2.0.30 <python bindings>
 3. Python 2.7+
 4. OpenCV 2.4.X
-
 Current features:
 1. Convert primensense oni -> numpy
 2. Stream and display depth
     press esc to exit
 3. Sync and registered depth & rgb streams
-
 NOTE: 
 1. On device streams:  IR and RGB streams do not work together
    Depth & IR  = OK
@@ -31,12 +27,17 @@ from primesense import _openni2 as c_api
 
 
 ## Path of the OpenNI redistribution OpenNI2.so or OpenNI2.dll
+
 # Windows
 #dist = 'C:\Program Files\OpenNI2\Redist\OpenNI2.dll'
-# Linux
-dist = '/home/carlos/Install/kinect/OpenNI2-Linux-<platform>-2.2/Redist/'
 
-## initialize openni and check
+# OMAP
+#dist = '/home/carlos/Install/kinect/OpenNI2-Linux-ARM-2.2/Redist/'
+
+# Linux
+dist ='/home/carlos/Install/openni2/OpenNI-Linux-x64-2.2/Redist'
+
+## Initialize openni and check
 openni2.initialize(dist) #
 if (openni2.is_initialized()):
     print "openNI2 initialized"
@@ -93,7 +94,7 @@ def get_depth():
                 Requires .set_video_mode
     """
     dmap = np.fromstring(depth_stream.read_frame().get_buffer_as_uint16(),dtype=np.uint16).reshape(240,320)  # Works & It's FAST
-    d4d = np.uint8(depth.astype(float) *255/ 2**12-1) # Correct the range. Depth images are 12bits
+    d4d = np.uint8(dmap.astype(float) *255/ 2**12-1) # Correct the range. Depth images are 12bits
     d4d = cv2.cvtColor(d4d,cv2.COLOR_GRAY2RGB)
     return dmap, d4d
 #get_depth
