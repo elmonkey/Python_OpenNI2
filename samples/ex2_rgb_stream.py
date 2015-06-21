@@ -10,10 +10,12 @@ Requires the following libraries:
     4. OpenCV 2.4.X
 
 Current features:
-1. Convert primensense oni -> numpy
-2. Stream and display rgb and depth 
-    press esc to exit
-3. Sync and registered depth & rgb streams
+    1. Convert primensense oni -> numpy
+    2. Stream and display rgb
+    3. Keyboard commands    
+        press esc to exit
+        press s to save current screen
+
 
 NOTE: 
     1. On device streams:  IR and RGB streams do not work together
@@ -21,7 +23,8 @@ NOTE:
        Depth & RGB = OK
        RGB & IR    = NOT OK
 
-    2. Do not synchronize with rgb or stream will feeze
+    2. Do not synchronize with depth or stream will feeze
+    
 @author: Carlos Torres <carlitos408@gmail.com>
 '''
 
@@ -73,19 +76,25 @@ def get_rgb():
 
 
 ## main loop
+s=0
 done = False
 while not done:
     key = cv2.waitKey(1)
     ## Read keystrokes
-    if (key&255) == 27:
+    key = cv2.waitKey(1) & 255
+    ## Read keystrokes
+    if key == 27: # terminate
         print "\tESC key detected!"
         done = True
+    elif chr(key) =='s': #screen capture
+        print "\ts key detected. Saving image {}".format(s)
+        cv2.imwrite("depth_"+str(s)+'.png', rgb)
+        #s+=1 # uncomment for multiple captures
     #if
     
     ## Streams    
     #RGB
     rgb = get_rgb()
-    #print 'Center pixel is {}mm away'.format(dmap[119,159])
 
     ## Display the stream syde-by-side
     cv2.imshow('rgb', rgb)
