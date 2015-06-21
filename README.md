@@ -4,5 +4,4 @@ Installation instructions and sample applications that use the official python w
 
 Tested on OMAP4 (ARM) PandaBoard ES running Ubuntu 12.04, Python 2.7.3, OpenNI2.2, and OpenCV.2.4.10
 
-
-Installation instructions can be found on the wiki (https://github.com/elmonkey/PandaboardES_OpenNI2_Python/wiki/Installation)
+Installation instructions can be found on the OMAP installation [wiki](https://github.com/elmonkey/OpenNI2_Python/wiki/Installation)
