@@ -70,15 +70,15 @@ sudo ldconfig
 
 # Method 2. For mulitple Openni installations direct the code to the correct version (see examples) by giving it the path to th library (e.g., 
 $ python
->> ...
->> openni2.initialize('~/Install/kinect/OpenNI2-Arm/Redist/') 
+...
+openni2.initialize('~/Install/kinect/OpenNI2-Arm/Redist/') 
 
 #=== TEST
 $ python
->> from primesense import openni2
->> openni2.initialize('~/Install/kinect/OpenNI2-Arm/Redist/') 
+from primesense import openni2
+openni2.initialize('~/Install/kinect/OpenNI2-Arm/Redist/') 
 # check that openni2 was properly initialized
->> if (openni2.is_initialized()):
->>   print "OpenNI2 initialized"
->> else:
->>   raise ValueError("OpenNI2 failed to initialize!!")
+if (openni2.is_initialized()):
+rint "OpenNI2 initialized"
+else:
+raise ValueError("OpenNI2 failed to initialize!!")
