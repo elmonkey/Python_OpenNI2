@@ -10,9 +10,13 @@ Requires the following libraries:
     4. OpenCV 2.4.X
 
 Current features:
-1. Convert primensense oni -> numpy
-2. Stream and display rgb and depth 
-    press esc to exit
+    1. Convert primensense oni -> numpy
+    2. Stream and display rgb and depth 
+    3. Keyboard commands
+        press esc to exit
+        press s to save current screen
+    4. Sample mirroring configuration
+
 
 @author: Carlos Torres <carlitos408@gmail.com>
 '''
@@ -49,6 +53,15 @@ depth_stream = dev.create_depth_stream()
 print 'Get b4 video mode', depth_stream.get_video_mode() # Checks depth video configuration
 depth_stream.set_video_mode(c_api.OniVideoMode(pixelFormat=c_api.OniPixelFormat.ONI_PIXEL_FORMAT_DEPTH_1_MM, resolutionX=320, resolutionY=240, fps=30))
 
+
+## Check and configure the mirroring -- default is True. See the effects
+# rgb mirroring = True
+# depth mirroring = False
+print 'Mirroring info1', depth_stream.get_mirroring_enabled()
+depth_stream.set_mirroring_enabled(False)
+#rgb_stream.set_mirroring_enabled(False)
+
+
 ## Start the streams
 rgb_stream.start()
 depth_stream.start()
@@ -83,19 +96,24 @@ def get_depth():
     """
     dmap = np.fromstring(depth_stream.read_frame().get_buffer_as_uint16(),dtype=np.uint16).reshape(240,320)  # Works & It's FAST
     d4d = np.uint8(dmap.astype(float) *255/ 2**12-1) # Correct the range. Depth images are 12bits
-    d4d = cv2.cvtColor(d4d,cv2.COLOR_GRAY2RGB)
+    d4d = 255 - cv2.cvtColor(d4d,cv2.COLOR_GRAY2RGB)
     return dmap, d4d
 #get_depth
 
 
 ## main loop
 done = False
+s = 0
 while not done:
-    key = cv2.waitKey(1)
+    key = cv2.waitKey(1) & 255
     ## Read keystrokes
-    if (key&255) == 27:
+    if key == 27: # terminate
         print "\tESC key detected!"
         done = True
+    elif chr(key) =='s': #screen capture
+        print "\ts key detected. Saving image {}".format(s)
+        cv2.imwrite("rgbdmirror_"+str(s)+'.png', rgbd)
+        #s+=1 # uncomment for multiple captures
     #if
     
     ## Streams
@@ -104,10 +122,13 @@ while not done:
     
     #DEPTH
     _,d4d = get_depth()
+    
+    # Canvas
+    rgbd = np.hstack((rgb,d4d))
 
 
     ## Display the stream syde-by-side
-    cv2.imshow('depth || rgb', np.hstack((d4d,rgb)) )
+    cv2.imshow('depth || rgb', rgbd)
 # end while
 
 ## Release resources 
