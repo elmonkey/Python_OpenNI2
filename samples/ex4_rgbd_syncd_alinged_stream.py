@@ -121,7 +121,7 @@ while not done:
         done = True
     elif chr(key) =='s': #screen capture
         print "\ts key detected. Saving image {}".format(s)
-        cv2.imwrite("rgbdsyncdalinged_"+str(s)+'.png', canvas)
+        cv2.imwrite("ex4_"+str(s)+'.png', canvas)
         #s+=1 # uncomment for multiple captures
     #if
     
