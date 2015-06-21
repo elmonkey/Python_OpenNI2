@@ -37,16 +37,15 @@ NOTE: root and ~ are used to represent home/yourname/
 OpenNI2. Download msi installer from [structure io](OpenNI-Windows-x64-2.2.0.33) and follow the instructions
 
 Primesense Python Bindings
-    * Pip, from terminal: 
-             + pip install primensense
-     
-    * Manual, download from [python wrapper](https://pypi.python.org/pypi/primesense/2.2.0.30-5)
+* Pip, from terminal: 
+* 
+    + pip install primensense
     
-             + On an administrator terminal (i.e., right click on a terminal and select "run as administrator")
-            
-             + Go to where the bindings were downloaded (e.g., cd C:\downloads\primensense)
-            
-             + python setup.py install
+* Manual, download from [python wrapper](https://pypi.python.org/pypi/primesense/2.2.0.30-5)
+    
+    + On an administrator terminal (i.e., right click on a terminal and select "run as administrator")
+    + Go to where the bindings were downloaded (e.g., cd C:\downloads\primensense)
+    + python setup.py install
 
 
 ## OMAP/ARM PandaBoard ES
