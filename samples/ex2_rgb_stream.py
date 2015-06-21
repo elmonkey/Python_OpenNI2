@@ -79,8 +79,6 @@ def get_rgb():
 s=0
 done = False
 while not done:
-    key = cv2.waitKey(1)
-    ## Read keystrokes
     key = cv2.waitKey(1) & 255
     ## Read keystrokes
     if key == 27: # terminate
@@ -88,7 +86,7 @@ while not done:
         done = True
     elif chr(key) =='s': #screen capture
         print "\ts key detected. Saving image {}".format(s)
-        cv2.imwrite("depth_"+str(s)+'.png', rgb)
+        cv2.imwrite("rgb_"+str(s)+'.png', rgb)
         #s+=1 # uncomment for multiple captures
     #if
     
