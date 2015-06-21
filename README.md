@@ -2,10 +2,11 @@
 
 Installation instructions and sample using the official Python wrappers for OpenNI2 and OpenCV
 
-* Tested on 
-    + OMAP4 (ARM) PandaBoard ES running Ubuntu 12.04, Python 2.7.3, OpenNI2.2, and OpenCV.2.4.10
-    + Linux Ubuntu 14.04 x64
+* Tested on the following systems (with Python 2.7.3, OpenNI2.2, and OpenCV.2.4.10)
+
     + Windows 7 x64
+    + Linux Ubuntu 14.04 x64
+    + PandaBoard ES/BeagleBoard-xm running Ubuntu 12.04 OMAP/ARM
 
 ## Dependencies (Windows use wheels)
 
@@ -47,6 +48,36 @@ Primesense Python Bindings
     + Go to where the bindings were downloaded (e.g., cd C:\downloads\primensense)
     + python setup.py install
 
+## Install OpenNI2 in Ubuntu 14.04
+`mkdir Install/kinect`
+
+`cd Install/kinect`
+
+Clone from occipital github
+
+`git clone https://github.com/occipital/OpenNI2`
+
+`cd OpenNI2`
+
+`make`
+
+`cd Packing`
+
+`python ReleaseVersion.py x64`
+
+If no errors, the compressed installer will be created in "Final" folder (i.e., OpenNI-Linux-64-2.2.tar.bz2).
+
+`cd Final && cp OpenNI-Linux--2.2.tar.bz2 ~/Install/kinect`
+
+Extract the contents to OpenNI-Linux-x64-2.2 and rename the folder (helps with multiple installations/versions)
+
+`mv ~/Install/kinect/OpenNI-Linux-x64-2.2 ~/Install/kinect/OpenNI2-x64`
+
+`cd ~/Install/kinect/OpenNI2-x64`
+
+Install
+
+`sudo ./install.sh`
 
 ## OpenNI2 in OMAP/ARM (PandaBoard ES and BeagleBoard -xm)
 
@@ -83,37 +114,6 @@ Extract the contents to OpenNI-Linux-Arm-2.2 and rename the folder (helps with m
 `mv ~/Install/kinect/OpenNI-Linux-Arm-2.2 ~/Install/kinect/OpenNI2-Arm`
 
 `cd ~/Install/kinect/OpenNI2-Arm`
-
-Install
-
-`sudo ./install.sh`
-
-## Install OpenNI2 in Ubuntu 14.04
-`mkdir Install/kinect`
-
-`cd Install/kinect`
-
-Clone from occipital github
-
-`git clone https://github.com/occipital/OpenNI2`
-
-`cd OpenNI2`
-
-`make`
-
-`cd Packing`
-
-`python ReleaseVersion.py x64`
-
-If no errors, the compressed installer will be created in "Final" folder (i.e., OpenNI-Linux-64-2.2.tar.bz2).
-
-`cd Final && cp OpenNI-Linux--2.2.tar.bz2 ~/Install/kinect`
-
-Extract the contents to OpenNI-Linux-x64-2.2 and rename the folder (helps with multiple installations/versions)
-
-`mv ~/Install/kinect/OpenNI-Linux-x64-2.2 ~/Install/kinect/OpenNI2-x64`
-
-`cd ~/Install/kinect/OpenNI2-x64`
 
 Install
 
