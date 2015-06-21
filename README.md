@@ -1,11 +1,12 @@
 # OpenNI2 Python
 
-Installation instructions and sample applications that use the official python wrappers for OpenNI 2 and OpenCV
+Installation instructions and sample using the official Python wrappers for OpenNI2 and OpenCV
 
 * Tested on 
     + OMAP4 (ARM) PandaBoard ES running Ubuntu 12.04, Python 2.7.3, OpenNI2.2, and OpenCV.2.4.10
     + Linux Ubuntu 14.04 x64
     + Windows 7 x64
+
 ## Dependencies (Windows use wheels)
 
 * OpenNI
