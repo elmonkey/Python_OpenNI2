@@ -37,7 +37,8 @@ NOTE: root and ~ are used to represent home/yourname/
 OpenNI2. Download msi installer from [structure io](OpenNI-Windows-x64-2.2.0.33) and follow the instructions
 
 Primesense Python Bindings
-    * Pip, from terminal: pip install primensense
+    * Pip, from terminal: 
+             + pip install primensense
      
     * Manual, download from [python wrapper](https://pypi.python.org/pypi/primesense/2.2.0.30-5)
     
