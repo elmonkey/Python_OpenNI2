@@ -65,7 +65,7 @@ depth_stream.set_mirroring_enabled(False)
 rgb_stream.set_mirroring_enabled(False)
 
 ## More infor on streams depth_ and rgb_
-help(depth_stream)
+#help(depth_stream)
 
 
 ## Start the streams
