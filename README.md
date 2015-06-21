@@ -120,7 +120,7 @@ Install
 `sudo ./install.sh`
 
 
-## Install Python bindings in Ubuntu 12.04 OMAP/ARM and Ubuntu 14.04 x64
+## Install Python bindings in Ubuntu (12.04 ARM and 14.04 x64)
 
 * Option 1. via pip -- not preferred
 
