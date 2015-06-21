@@ -14,7 +14,7 @@ Current features:
     2. Stream and display depth 
     3. Keyboard commands    
         press esc to exit
-        press s to save current screen
+        press s to save current screen and distancemap
 
 NOTE: 
     1. On device streams:  IR and RGB streams do not work together
@@ -102,9 +102,10 @@ while not done:
         print "\tESC key detected!"
         done = True
     elif chr(key) =='s': #screen capture
-        print "\ts key detected. Saving image {}".format(s)
-        cv2.imwrite("depth_"+str(s)+'.png', d4d)
-        #s+=1 # uncomment for multiple captures
+        print "\ts key detected. Saving image and distance map {}".format(s)
+        cv2.imwrite("rgbdoverlayed_"+str(s)+'.png', canvas)
+        np.savetxt("distancemap"+str(s)+'.out',dmap)
+        #s+=1 # uncomment for multiple captures   
     #if
     
     ## Streams    
