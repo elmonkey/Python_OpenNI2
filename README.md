@@ -36,7 +36,7 @@ Compile and Install OpenNI2. Open a terminal (ctrl+alt+t).
 NOTE: root and ~ are used to represent home/yourname/
 
 
-## OpenNI2 Windows 7 x64 [Installation details](https://github.com/occipital/OpenNI2)
+## OpenNI2 Windows 7 x64 [installation](https://github.com/occipital/OpenNI2) details
 
 OpenNI2. Download msi installer from [structure io](OpenNI-Windows-x64-2.2.0.33) and follow the instructions
 
