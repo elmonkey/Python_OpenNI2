@@ -14,7 +14,7 @@ Current features:
     2. Stream and display rgb || depth || rgbd overlayed
     3. Keyboard commands    
         press esc to exit
-        press s to save current screen    
+        press s to save current screen and distancemap
     4. Sync and registered depth & rgb streams
     5. Print distance to center pixel
     6. Masks and overlays rgb stream on the depth stream
@@ -139,9 +139,10 @@ while not done:
         print "\tESC key detected!"
         done = True
     elif chr(key) =='s': #screen capture
-        print "\ts key detected. Saving image {}".format(s)
+        print "\ts key detected. Saving image and distance map {}".format(s)
         cv2.imwrite("rgbdoverlayed_"+str(s)+'.png', canvas)
-        #s+=1 # uncomment for multiple captures
+        np.savetxt("distancemap"+str(s)+'.out',dmap)
+        #s+=1 # uncomment for multiple captures        
     #if
     
     ## Streams
