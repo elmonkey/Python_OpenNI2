@@ -8,8 +8,11 @@ Installation instructions and sample using the official Python wrappers for Open
     + Linux Ubuntu 14.04 x64
     + PandaBoard ES/BeagleBoard-xm running Ubuntu 12.04 OMAP/ARM
 
-## Dependencies (Windows use wheels)
+## Dependencies
 
+Windows use wheels from [LDF](http://www.lfd.uci.edu/~gohlke/pythonlibs/)
+
+Linux Ubuntu
 * OpenNI
 
 `sudo apt-get install libudev-dev libusb-1.0.0-dev`
