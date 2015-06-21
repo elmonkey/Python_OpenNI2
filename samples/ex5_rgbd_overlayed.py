@@ -156,7 +156,7 @@ while not done:
     rgbd  = mask_rgbd(d4d,rgb)
     
     # canvas
-    canvas = np.hstacknp.hstack((d4d,rgb,rgbd))
+    canvas = np.hstack((d4d,rgb,rgbd))
     
     ## Distance map
     print 'Center pixel is {} mm away'.format(dmap[119,159])
