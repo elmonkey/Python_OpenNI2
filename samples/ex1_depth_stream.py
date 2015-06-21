@@ -103,8 +103,8 @@ while not done:
         done = True
     elif chr(key) =='s': #screen capture
         print "\ts key detected. Saving image and distance map {}".format(s)
-        cv2.imwrite("rgbdoverlayed_"+str(s)+'.png', canvas)
-        np.savetxt("distancemap"+str(s)+'.out',dmap)
+        cv2.imwrite("ex1_"+str(s)+'.png', d4d)
+        np.savetxt("ex1dmap_"+str(s)+'.out',dmap)
         #s+=1 # uncomment for multiple captures   
     #if
     
