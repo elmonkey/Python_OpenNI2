@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''
 Created on 19Jun2015
-Stream rgb and depth images side by side using opencv-python (cv2). Streams are synchronized and aligned.
+Stream rgb and depth video side-by-side using openni2 opencv-python (cv2). Streams ARE aligned, mirror-corrected, or synchronized.
 
 Requires the following libraries:
     1. OpenNI-Linux-<Platform>-2.2 <Library and driver>
