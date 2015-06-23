@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''
 Created on 19Jun2015
-Stream rgb and depth images side by side using opencv-python (cv2)
+Stream depth video using openni2 opencv-python (cv2)
 
 Requires the following libraries:
     1. OpenNI-Linux-<Platform>-2.2 <Library and driver>
