@@ -52,9 +52,9 @@ Primesense Python Bindings
     + python setup.py install
 
 ## Install OpenNI2 in Ubuntu 14.04
-`mkdir Install/kinect`
+`mkdir Install/openni2`
 
-`cd Install/kinect`
+`cd Install/openni2`
 
 Clone from occipital github
 
@@ -70,13 +70,13 @@ Clone from occipital github
 
 If no errors, the compressed installer will be created in "Final" folder (i.e., OpenNI-Linux-64-2.2.tar.bz2).
 
-`cd Final && cp OpenNI-Linux--2.2.tar.bz2 ~/Install/kinect`
+`cd Final && cp OpenNI-Linux--2.2.tar.bz2 ~/Install/openni2`
 
 Extract the contents to OpenNI-Linux-x64-2.2 and rename the folder (helps with multiple installations/versions)
 
-`mv ~/Install/kinect/OpenNI-Linux-x64-2.2 ~/Install/kinect/OpenNI2-x64`
+`mv ~/Install/openni2/OpenNI-Linux-x64-2.2 ~/Install/openni2/OpenNI2-x64`
 
-`cd ~/Install/kinect/OpenNI2-x64`
+`cd ~/Install/openni2/OpenNI2-x64`
 
 Install
 
@@ -84,9 +84,9 @@ Install
 
 ## OpenNI2 in OMAP/ARM (PandaBoard ES and BeagleBoard -xm)
 
-`mkdir Install/kinect`
+`mkdir Install/openni2`
 
-`cd Install/kinect`
+`cd Install/openni2`
 
 Clone from occipital github
 
@@ -114,9 +114,9 @@ If no errors, the compressed installer will be created in "Final" folder (i.e., 
 
 Extract the contents to OpenNI-Linux-Arm-2.2 and rename the folder (helps with multiple installations/versions)
 
-`mv ~/Install/kinect/OpenNI-Linux-Arm-2.2 ~/Install/kinect/OpenNI2-Arm`
+`mv ~/Install/openni2/OpenNI-Linux-Arm-2.2 ~/Install/kinect/OpenNI2-Arm`
 
-`cd ~/Install/kinect/OpenNI2-Arm`
+`cd ~/Install/openni2/OpenNI2-Arm`
 
 Install
 
@@ -135,7 +135,7 @@ Download from: [python wrappers](https://pypi.python.org/pypi/primesense/primese
 
 Copy the tar.gz file to a known location
 
-`cd ~/Downloads && mv primesense-2.2.0.30-5.tar.gz ~/Install/kinect`
+`cd ~/Downloads && mv primesense-2.2.0.30-5.tar.gz ~/Install/openni2`
 
 Extract
 
@@ -149,13 +149,13 @@ Direct the system to the location of libOpenNI2.so (Two methods)
 
 * Method 1. Create a symbolic link to OpenNI2/Redist/OpenNI2.so or copy the library to /usr/local/lib/
 
-`sudo cp root/Install/kinect/OpenNI2-Arm/libOpenNI2.so /usr/local/lib # repeat for libNiTE2.so if available`
+`sudo cp root/Install/openni2/OpenNI2-Arm/libOpenNI2.so /usr/local/lib # repeat for libNiTE2.so if available`
 
 `sudo ldconfig`
 
 * Method 2. For mulitple OpenNI installations. Direct the code to library location using:
 
-`openni2.initialize(root+"/Install/kinect/OpenNI2-Arm/Redist/")`
+`openni2.initialize(root+"/Install/openni2/OpenNI2-Arm/Redist/")`
 
 
 ## Test the setup using the initialize and is_initialize methods
@@ -164,7 +164,7 @@ Direct the system to the location of libOpenNI2.so (Two methods)
 
 `>>from primesense import openni2`
 
-`>>openni2.initialize(root+"/Install/kinect/OpenNI2-Arm/Redist/")`
+`>>openni2.initialize(root+"/Install/openni2/OpenNI2-Arm/Redist/")`
 
 `>>if (openni2.is_initialized()):`
 
