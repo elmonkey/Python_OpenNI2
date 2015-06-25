@@ -131,7 +131,7 @@ Install
 
 * Option 2. Manual Installation -- preferred
 
-Download from: [python wrappers](https://pypi.python.org/pypi/primesense/primesense-2.2.0.30-5.tar.gz) and save in system Downloads
+Download from: [primesense python wrapper](https://pypi.python.org/pypi/primesense/) and save in system Downloads
 
 Copy the tar.gz file to a known location
 
