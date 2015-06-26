@@ -1,12 +1,16 @@
 # OpenNI2 Python
+Compile and Install OpenNI2
 
-Installation instructions and samples using the official Python wrappers for OpenNI2 and OpenCV. Build and installation instructionsa adapted from [Occipital](https://github.com/occipital/OpenNI2)
+Installation instructions and samples using the official Python wrappers for OpenNI2 and OpenCV.  Adapted from [Occipital](https://github.com/occipital/OpenNI2)
 
-* Tested on the following systems (with Python 2.7.3, OpenNI2.2, and OpenCV.2.4.10)
+* Tested on the following systems (running Python 2.7.3, OpenNI2.2, and OpenCV.2.4.10)
 
     + Windows 7 x64
     + Linux Ubuntu 14.04 x64
     + PandaBoard ES/BeagleBoard-xm running Ubuntu 12.04 OMAP/ARM
+
+
+NOTE: root and ~ are used to represent home/<username>/
 
 ## Dependencies
 
@@ -31,10 +35,6 @@ Linux Ubuntu
 `sudo apt-get -y install ipython python-pip`
 
 `sudo apt-get -y install libboost-python-dev`
-
-Compile and Install OpenNI2. Open a terminal (ctrl+alt+t). 
-NOTE: root and ~ are used to represent home/yourname/
-
 
 ## OpenNI2 Windows 7 x64 [installation](https://github.com/occipital/OpenNI2) details
 
