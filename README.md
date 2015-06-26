@@ -8,6 +8,8 @@ Installation instructions and samples using the official Python wrappers for Ope
     + Windows 7 x64
     + Linux Ubuntu 14.04 x64
     + PandaBoard ES/BeagleBoard-xm running Ubuntu 12.04 OMAP/ARM
+        + [Panda](https://docs.google.com/document/d/1MjW0vVms-r4gm0KSYxb3JSKimJ_kvG0yLDgu_mTnBzk/edit?usp=sharing) ubuntu installation -- gdoc instructions
+        + [Beagle](https://docs.google.com/document/d/1sOKNSICoNeKMtrbIBvHbpXfJDbkfdD-jI5BVD8dfOMc/edit?usp=sharing) ubuntu installation -- gdoc instructions
 
 
 NOTE: root and ~ are used to represent home/<username>/
@@ -82,7 +84,7 @@ Install
 
 `sudo ./install.sh`
 
-## OpenNI2 in OMAP/ARM (PandaBoard ES and BeagleBoard -xm)
+## OpenNI2 in PandaBoard-ES and BeagleBoard-xM
 
 `mkdir Install/kinect/openni2`
 
