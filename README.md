@@ -85,7 +85,7 @@ Clone from occipital github
 
 `cd Packing`
 
-`python ReleaseVersion.py x64`
+`python ReleaseVersion.py x64 #x86`
 
 If no errors, the compressed installer will be created in "Final" folder (i.e., OpenNI-Linux-64-2.2.tar.bz2).
 
