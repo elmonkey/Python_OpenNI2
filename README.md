@@ -27,6 +27,8 @@ Linux Ubuntu
 
 `sudo apt-get install doxygen graphviz default-jdk freeglut3-dev`
 
+There are could be issues with x86 architectures and jdk. Follow this [[link](https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get)] on how fix the issue.
+
 
 * Python Environment
 
