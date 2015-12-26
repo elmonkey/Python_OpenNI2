@@ -36,7 +36,7 @@ There is a known issue with x86 architectures and jdk. Follow this [[link](https
 
 `sudo apt-get update`
 
-The workaround was tested with jdk6 (commands to install other versions are on the site).
+**NOTE**: the workaround was tested with jdk6 (commands to install other versions are on the site).
 
 `sudo apt-get install oracle-java6-installer`
 
