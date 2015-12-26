@@ -40,7 +40,7 @@ The workaround was tested with jdk6 (commands to install other versions are on t
 
 `sudo apt-get install oracle-java6-installer`
 
-Then finally update the flags using the command from this ([link][http://stackoverflow.com/questions/25851510/openni2-error-when-running-make])
+Then finally update the flags using the command from this [[link](http://stackoverflow.com/questions/25851510/openni2-error-when-running-make)]
 
 `export LDFLAGS+="-lc"`
 
