@@ -27,7 +27,22 @@ Linux Ubuntu
 
 `sudo apt-get install doxygen graphviz default-jdk freeglut3-dev`
 
-There are could be issues with x86 architectures and jdk. Follow this [[link](https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get)] on how fix the issue.
+* JDK 
+There is a known issue with x86 architectures and jdk. Follow this [[link](https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get)] to add the jdk repo.
+
+`sudo apt-get install python-software-properties`
+
+`sudo add-apt-repository ppa:webupd8team/java`
+
+`sudo apt-get update`
+
+The workaround was tested with jdk6 (commands to install other versions are on the site).
+
+`sudo apt-get install oracle-java6-installer`
+
+Then finally update the flags using the command from this ([link][http://stackoverflow.com/questions/25851510/openni2-error-when-running-make])
+
+`export LDFLAGS+="-lc"`
 
 
 * Python Environment
