@@ -1,7 +1,10 @@
+
+This guide assumes that users have a Carmine device and primesense API's and drivers OpenNI2 and NiTE2. Steps to install and configure opeNI2 with Msft's Kinect are being tested. In the meantime, the following link provides an easy to follwo guide (untested) for to use [OpenNI2 with Kinect](http://cupofpixel.blogspot.com/2013/04/how-to-use-openni-2-nite-2-kinect-on.html)
+
 # OpenNI2 Python
 Compile and Install OpenNI2
 
-Installation instructions and samples using the official Python wrappers for OpenNI2 and OpenCV.  Adapted from [Occipital](https://github.com/occipital/OpenNI2)
+Installation instructions and samples using the official Python wrappers for OpenNI2 and OpenCV. Adapted from [Occipital](https://github.com/occipital/OpenNI2)
 
 * Tested on the following systems (running Python 2.7.3, OpenNI2.2, and OpenCV.2.4.10)
 
