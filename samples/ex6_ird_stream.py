@@ -115,7 +115,7 @@ def get_ir():
     Returns numpy ndarrays representing raw and ranged infra-red(IR) images.
     Outputs:
         ir    := raw IR, 1L ndarray, dtype=uint16, min=0, max=2**12-1
-        ir4d  := IR for dislay, 3L ndarray, dtype=uint8, min=0, max=255
+        ir4d  := IR for display, 3L ndarray, dtype=uint8, min=0, max=255
     """
     ir_frame = ir_stream.read_frame()
     ir_frame_data = ir_stream.read_frame().get_buffer_as_uint16()
